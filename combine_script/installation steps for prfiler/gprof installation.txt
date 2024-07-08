@@ -1,0 +1,6 @@
+1.gcc -pg -o filename filenme.c
+2../my_application
+3.create gmon.out 
+4.to view report
+
+gprog executable file gmon.out > to save thies report in file  give any file name.

@@ -1,0 +1,24 @@
+##########check the vtune availability##########
+module avail | grep vtune
+
+##########load the latest vtune#########3
+module load vtune/latest
+
+######if not availble in module theload using spack############
+spack list |grep vtune
+
+spack find intel-vtune/latest
+
+spack info intel-vtune/latest
+
+spack spec -I intel-vtune/latest
+
+spack install-v -j40 intel-vtune/latest
+
+spack load intel-vtune/latest   #######<vtune-latest> will be the package name
+
+
+############compile command for vtune######
+vtune --collect=hotspot --result-dir=./report -- ./mmult_serial
+cd report
+vtune-gui report.vtune

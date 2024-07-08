@@ -1,0 +1,35 @@
+>>>>>>>>>>spack installationn.guide>>>>>>>
+git clone https://github.com/spack/spack.git
+
+>>>>>>>>>go to spack directory>>>>>>>>>>>>
+cd spack
+
+>>>>>>>>>>create spack  envrironmenet in given folder>>>>>>>>
+source /home/user4/HPC_intro/Day2/spack/share/spack/setup-env.sh
+
+>>>>>>>check spack version>>>>>>>>>>>>
+spack --version
+
+>>>>>>>>to check the list of packages in spack>>>>>>>>>>>>
+spack list
+
+>>>>>>>>to check that package is available or not>>>>>>>>
+ spack list | grep <<package name>>
+ 
+ (spack list- means how many packages are available in spack)
+ (spack find - means how many packages are installed in spack )
+ 
+ >>>>>command for finding packages in spack>>>>>>>>>
+ spack find 
+ 
+ >>>>>command for pacakges details>>>>>>>
+ spack info <<package name>>
+ 
+ >>>>to check the spec of any package<<<
+ spack spec -I hpctoolkit
+ 
+ >>>>>command for install package<<<<<<<
+ spack install -v -j40 hpctoolkit
+ spack install -v -j40 hpctoolkit+cuda
+
+>>>>>spack install -v -j40 <<package name>>

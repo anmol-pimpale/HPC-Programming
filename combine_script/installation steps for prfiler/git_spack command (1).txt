@@ -1,0 +1,14 @@
+git clone https://github.com/spack/spack.git
+cd spack
+git checkout release/v0.19
+source /home/file locatin/setup-env.sh
+spack --version
+
+spack install -v -j40 hcptool kit
+spack load gcc@13.2.0
+spack compiler find
+spack compilers
+
+spack install intel-oneapi-compiler@
+spack compiler find
+spack compilers 

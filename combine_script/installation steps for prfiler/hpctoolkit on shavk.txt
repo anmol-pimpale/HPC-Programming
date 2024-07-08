@@ -1,0 +1,21 @@
+
+
+[user4@shavak ~]$ source /home/apps/spack/share/spack/setup-env.sh
+
+
+[user4@shavak ~]$ spack find hpctoolkit
+
+
+-- linux-centos7-cascadelake / gcc@11.2.0 -----------------------
+hpctoolkit@2021.10.15
+
+[user4@shavak ~]$ spack load hpctoolkit@2021.10.15
+
+[user4@shavak ~]$ spack find lammps
+
+
+-- linux-centos7-cascadelake / gcc@11.2.0 -----------------------
+lammps@20210310
+
+-- linux-centos7-cascadelake / intel@2021.4.0 -------------------
+lammps@20210310

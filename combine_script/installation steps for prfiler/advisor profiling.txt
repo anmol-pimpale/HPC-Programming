@@ -1,0 +1,51 @@
+<<<<<<check the module available>>>>>>>
+module avail
+
+<<<<<<advsior name module will show>>>>>>
+module avail | grep advisor
+
+<<<<<load the module>>>>>>>>>
+module load advisor/latest  ###profiling tool loaded
+
+<<<<to check module>>>>>
+advisor -h
+
+###########above command is applicable when the module is not installed######
+
+
+
+######below code is applicable when their is module#####
+<<<if not available load the advisor>>>>>>.
+spack list | grep advisor
+
+<<<<<<to chekck info>>>>>>>
+spack info intel-<name>
+
+<<<<<to install the profilers>>>>>
+spack install -v -j40 <intel-oneapi-advisor>   #3#-
+
+<<<<loading the app>>>>>>>
+spack load <intel-oneapi-advisor>    ###<name of the function>
+
+
+
+
+
+note####  
+advisor --collect=offload --config=<GPU id name> --location of folder -- file name
+
+
+
+
+<<<<Commands for shwak for advisor>>>>>>>>>>
+g++ -o filename filename with extension 
+module load advisor/latest 
+
+after module we can run
+<<<<<<<<report print commands>>>>>>>>>>
+advisor --collect=offload --config=gen11_icl --project-dir=./<foldername> -- ./<execution file>
+
+advisor --collect=offload --dry run --config=gen11_icl --project-dir=./HPC_INTRO -- ./Matrixmulti
+
+<<<<<to check accuracy>>>
+advisor --collect=offload --accuracy=low --config=gen11_icl --project-dir=./HPC_INTRO -- ./Matrixmulti
